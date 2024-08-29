@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.version     = Dynabute::VERSION
   s.authors     = ["Liooo"]
   s.email       = ["ryoyamada3@gmail.com"]
-  s.homepage    = "https://github.com/Liooo/dynabute"
+  s.homepage    = "https://github.com/VishalMahto-dev/dynabute_2"
   s.summary     = "DYNAmic attriBUTEs for ActiveRecord"
   s.description = "Dynamically add attributes on ActiveRecord."
   s.license     = "MIT"
