@@ -58,7 +58,7 @@ class CreateDynabutes < ActiveRecord::Migration[5.1]
     t.integer  "field_id", limit: 4
     t.integer  "dynabutable_id", limit: 4
     t.string   "dynabutable_type", limit: 50
-    t.integer  "value"
+    t.text  "value"
   end
   add_index "dynabute_text_values", ["dynabutable_id"], name: "dynabute_text_values_on_recordable_id", using: :btree
   add_index "dynabute_text_values", ["dynabutable_id", "field_id"], name: "dynabute_text_values_on_record_id_and_recordable_id", using: :btree
@@ -67,7 +67,7 @@ class CreateDynabutes < ActiveRecord::Migration[5.1]
     t.integer  "field_id", limit: 4
     t.integer  "dynabutable_id", limit: 4
     t.string   "dynabutable_type", limit: 50
-    t.integer  "value"
+    t.text  "value"
   end
   add_index "dynabute_textarea_values", ["dynabutable_id"], name: "dynabute_textarea_values_on_recordable_id", using: :btree
   add_index "dynabute_textarea_values", ["dynabutable_id", "field_id"], name: "dynabute_textarea_values_on_record_id_and_recordable_id", using: :btree
@@ -76,7 +76,7 @@ class CreateDynabutes < ActiveRecord::Migration[5.1]
     t.integer  "field_id", limit: 4
     t.integer  "dynabutable_id", limit: 4
     t.string   "dynabutable_type", limit: 50
-    t.integer  "value"
+    t.string  "value"
   end
   add_index "dynabute_email_values", ["dynabutable_id"], name: "dynabute_email_values_on_recordable_id", using: :btree
   add_index "dynabute_email_values", ["dynabutable_id", "field_id"], name: "dynabute_email_values_on_record_id_and_recordable_id", using: :btree
@@ -85,7 +85,7 @@ class CreateDynabutes < ActiveRecord::Migration[5.1]
     t.integer  "field_id", limit: 4
     t.integer  "dynabutable_id", limit: 4
     t.string   "dynabutable_type", limit: 50
-    t.integer  "value"
+    t.string  "value"
   end
   add_index "dynabute_url_values", ["dynabutable_id"], name: "dynabute_url_values_on_recordable_id", using: :btree
   add_index "dynabute_url_values", ["dynabutable_id", "field_id"], name: "dynabute_url_values_on_record_id_and_recordable_id", using: :btree
