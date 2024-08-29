@@ -5,7 +5,7 @@ module Dynabute
   class Field < ActiveRecord::Base
     include Joins::Field
     def self.table_name_prefix; Util.table_name_prefix; end
-    TYPES = %w(string integer boolean datetime select textarea text url email )
+    TYPES = %w(string integer boolean datetime select textarea text url email)
     validates :value_type, inclusion: {in: TYPES}
     validates :name, presence: true, uniqueness: { scope: :target_model }
     validates_presence_of :target_model

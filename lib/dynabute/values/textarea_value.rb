@@ -1,6 +1,6 @@
 module Dynabute
   module Values
-    class TextAreaValue < ActiveRecord::Base
+    class TextareaValue < ActiveRecord::Base
       include Dynabute::Values::Base
     end
   end

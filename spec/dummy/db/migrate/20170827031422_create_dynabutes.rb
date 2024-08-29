@@ -63,14 +63,14 @@ class CreateDynabutes < ActiveRecord::Migration[5.1]
   add_index "dynabute_text_values", ["dynabutable_id"], name: "dynabute_text_values_on_recordable_id", using: :btree
   add_index "dynabute_text_values", ["dynabutable_id", "field_id"], name: "dynabute_text_values_on_record_id_and_recordable_id", using: :btree
 
-  create_table "dynabute_text_area_values", force: :cascade do |t|
+  create_table "dynabute_textarea_values", force: :cascade do |t|
     t.integer  "field_id", limit: 4
     t.integer  "dynabutable_id", limit: 4
     t.string   "dynabutable_type", limit: 50
     t.integer  "value"
   end
-  add_index "dynabute_text_area_values", ["dynabutable_id"], name: "dynabute_text_area_values_on_recordable_id", using: :btree
-  add_index "dynabute_text_area_values", ["dynabutable_id", "field_id"], name: "dynabute_text_area_values_on_record_id_and_recordable_id", using: :btree
+  add_index "dynabute_textarea_values", ["dynabutable_id"], name: "dynabute_textarea_values_on_recordable_id", using: :btree
+  add_index "dynabute_textarea_values", ["dynabutable_id", "field_id"], name: "dynabute_textarea_values_on_record_id_and_recordable_id", using: :btree
 
   create_table "dynabute_email_values", force: :cascade do |t|
     t.integer  "field_id", limit: 4
