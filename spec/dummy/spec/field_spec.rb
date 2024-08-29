@@ -3,7 +3,7 @@ require './spec/dummy/spec/rails_helper'
 RSpec.describe Dynabute, type: :model do
   describe 'Model.value_types' do
     it 'works' do
-      expect(Dynabute::Field.value_types).to eq(%w(string integer boolean datetime select))
+      expect(Dynabute::Field.value_types).to eq(%w(string integer boolean datetime select textarea text url email))
     end
   end
 
@@ -24,7 +24,7 @@ RSpec.describe Dynabute, type: :model do
 
   describe 'Model.dynabute_relation_names' do
     it 'returns relations' do
-      expect(User.dynabute_relation_names).to eq(%i(string_values integer_values boolean_values datetime_values select_values))
+      expect(User.dynabute_relation_names).to eq(%i(string_values integer_values boolean_values datetime_values select_values textarea_values text_values url_values email_values))
     end
   end
 
